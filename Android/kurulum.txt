@@ -1,0 +1,40 @@
+1. Projeyi Android Studio'ya açýn
+2. En azýndan Android Studio V2.0 kullandýðýnýzdan emin olun
+3. res / deðerlere göz atýn ve strings.xml dosyasýný açýn
+4. "app_name" dizesindeki yer tutucuyu, uygulamanýzýn adýyla deðiþtirin.
+5. "dialog_about" yer tutucusunu kendi metninizle deðiþtirin (CDATA [] içinde tümü temel html'ye sahip olabilir).
+6. Ýsteðe baðlý olarak Admob Afiþ Reklam Birimi Kimliðinizi ve Admob Geçiþ Birimi Kimliðinizi girin.
+7. res / deðerlere göz atýn ve colors.xml dosyasýný açýn.
+8. Renklerin yer tutucu deðerlerini kendi renklerinizle deðiþtirin (# ile baþlayan).
+9. com.sherdle.webtoapp'a gidin ve Config.java dosyasýný açýn.
+10. Analytics'i kullanmak istiyorsanýz, ANALYTICS_ID için bir deðer girebilirsiniz
+11. Ýsteðe baðlý olarak 'yenilemek için çek' ve 'çekmece modu' gibi diðer parametreleri yapýlandýrýn ve ayarlayýn.
+12A. Uygulamanýzda tek bir url görüntülemek istiyorsanýz, url dizisine bir URL girebilirsiniz, örneðin:
+ Public static final String [] BAÞLIKLAR = new String [] {"MySite"};
+ Public static final String [] URLS = new String [] {"http://mysite.com"};
+12B. Uygulamanýzda birden fazla baðlantý görüntülemek istiyorsanýz, url dizininde tüm URL'lerinizi girebilirsiniz, örneðin:
+ Public static final String [] BAÞLIKLAR = new String [] {"Google", "Yahoo", "DuckDuckGo"};
+ Public static final String [] URLS = yeni String [] {"http://google.com", "http://yahoo.com", "http://hasanatilan.com.tr"};
+13. OneSignal push bildirimlerini kullanmak isterseniz build.gradle (giriþ / uygulama) 'yý açýn ve' onesignal_app_id 've' onesignal_google_project_number 'için bir deðer girin
+
+Artýk yalnýzca varlýklarýnýzý deðiþtirmeniz (simge ve açýlýþ ekraný) gerekir.
+
+Simgesi
+1. Önce bir uygulama simgesine ihtiyacýnýz olacak, bu uygulama bir kare .png resmi olmalýdýr.
+2. Simgenizi, Google Play Store gönderimi için 512x512 png bir resme ve uygulamanýz için bir 124x124 resme yeniden boyutlandýrmanýz gerekir.
+3. 124x124 resmini ic_launcher.png'ye yeniden adlandýrýn (ic_launcher.png.png olmamasýna dikkat edin, bazen uzantý gizlidir).
+4. 'uygulama' adý verilen bir klasörü göreceksiniz, açýn ve 'res / mipmap-xhdpi /' klasörüne göz atýn.
+5. Þimdi bu klasöre ait ic_launcher.png dosyasýný ic_launcher.png dosyanýzla deðiþtirin.
+
+Baþlangýç ??ekraný
+En iyi performans için, þeffaf bir arka plana sahip bir logoyu, ekran görüntüsü olarak kullanmanýzý öneririz. Bu daha kolay ve çok daha iyi görünüyor.
+1. Tabletlerde en iyi performansý elde etmek için logonuzu, tercihen yüksek kaliteli bir imajý alýn ve adý vert_loading.png
+2. Þimdi masaüstünüzdeki þablonun klasörü içindeki 'uygulama' adlý klasörü tekrar açýn
+Ve 'res / drawable-nodpi /' öðesine göz atýn
+
+
+
+
+Türkçeliþtirme Hasan Atýlan 
+
+Yapýmcý WEB2 Team.
